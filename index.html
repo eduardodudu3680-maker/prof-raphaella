@@ -1,0 +1,1189 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fce4ec">
+<title>Para Raphaella ❤️ | 8º M02</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --rosa: #d85b89;
+  --rosa-claro: #fce4ec;
+  --rosa-escuro: #9e315b;
+  --dourado: #c49a53;
+  --texto: #653849;
+  --branco: #fffdfd;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #fff7fa;
+  color: var(--texto);
+  overflow-x: hidden;
+}
+
+button, input, textarea {
+  font: inherit;
+}
+
+button, a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* FUNDO ANIMADO */
+
+#petalas {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.petala {
+  position: absolute;
+  top: -40px;
+  animation: cair linear infinite;
+  opacity: .7;
+}
+
+@keyframes cair {
+  0% {
+    transform: translateY(-50px) rotate(0deg);
+    opacity: 0;
+  }
+  15% { opacity: .8; }
+  100% {
+    transform: translateY(110vh) rotate(500deg);
+    opacity: 0;
+  }
+}
+
+/* MENU */
+
+.topo {
+  width: 100%;
+  min-height: 70px;
+  padding: 14px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  box-shadow: 0 3px 20px rgba(140,50,85,.08);
+}
+
+.logo {
+  font-weight: 700;
+  color: var(--rosa);
+  font-size: 19px;
+}
+
+.topo nav {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+}
+
+.topo nav a {
+  font-size: 12px;
+  font-weight: 500;
+  transition: .3s;
+}
+
+.topo nav a:hover {
+  color: var(--rosa);
+}
+
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--rosa);
+  font-size: 27px;
+  cursor: pointer;
+}
+
+/* CAPA */
+
+.hero {
+  min-height: 90vh;
+  padding: 70px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 10% 20%, #fff 0, transparent 30%),
+    linear-gradient(135deg, #fce4ec, #fff4f7, #f7d5e2);
+}
+
+.hero-card {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+  width: 100%;
+  text-align: center;
+  padding: 55px 30px;
+  border: 1px solid rgba(255,255,255,.9);
+  border-radius: 30px;
+  background: rgba(255,255,255,.66);
+  box-shadow: 0 20px 65px rgba(153,57,93,.12);
+  animation: aparecer 1s ease both;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.flor {
+  display: block;
+  font-size: 46px;
+  margin-bottom: 15px;
+  animation: flutuar 3s ease-in-out infinite;
+}
+
+@keyframes flutuar {
+  50% { transform: translateY(-9px) rotate(5deg); }
+}
+
+.pequeno, .etiqueta {
+  color: var(--rosa);
+  letter-spacing: 4px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.hero h1 {
+  margin: 18px 0;
+  font-size: clamp(38px, 8vw, 70px);
+  line-height: 1.2;
+  color: #85445c;
+  font-weight: 500;
+}
+
+.hero h1 span {
+  font-family: 'Great Vibes', cursive;
+  color: var(--rosa);
+  font-size: 1.4em;
+  font-weight: 400;
+}
+
+.linha {
+  width: 90px;
+  height: 2px;
+  margin: 20px auto;
+  background: linear-gradient(90deg, transparent, var(--dourado), transparent);
+}
+
+.subtitulo {
+  max-width: 470px;
+  margin: auto;
+  font-size: 14px;
+  line-height: 2;
+  color: #805768;
+}
+
+.turma {
+  margin: 20px 0;
+  color: var(--rosa-escuro);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.botao {
+  display: inline-block;
+  padding: 14px 24px;
+  border-radius: 30px;
+  color: white;
+  background: linear-gradient(135deg, #e779a1, #bd426f);
+  font-size: 12px;
+  font-weight: 600;
+  box-shadow: 0 8px 22px rgba(190,66,111,.25);
+  transition: .3s;
+  border: none;
+  cursor: pointer;
+}
+
+.botao:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(190,66,111,.35);
+}
+
+.decoracao {
+  position: absolute;
+  color: rgba(208,93,137,.18);
+  font-size: 100px;
+}
+
+.decoracao1 { top: 8%; left: 5%; }
+.decoracao2 { bottom: 8%; right: 7%; font-size: 140px; }
+.decoracao3 { top: 25%; right: 9%; font-size: 60px; }
+
+/* SEÇÕES */
+
+.secao {
+  padding: 90px 20px;
+  text-align: center;
+}
+
+.secao h2 {
+  margin: 12px auto 35px;
+  font-size: clamp(25px, 5vw, 39px);
+  font-weight: 500;
+  color: #85445c;
+}
+
+.secao h2 span {
+  color: var(--rosa);
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.4em;
+}
+
+#significado {
+  background: #fff;
+}
+
+.cartao-significado {
+  max-width: 650px;
+  margin: auto;
+  padding: 38px 30px;
+  border-radius: 25px;
+  background: linear-gradient(145deg, #fff8fb, #fce8ef);
+  border: 1px solid #f6d4e1;
+  box-shadow: 0 15px 40px rgba(153,57,93,.08);
+}
+
+.icone-grande {
+  font-size: 45px;
+  margin-bottom: 10px;
+}
+
+.cartao-significado h3 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 52px;
+  font-weight: 400;
+  color: var(--rosa);
+}
+
+.origem {
+  margin: 5px 0 15px;
+  font-size: 11px;
+  color: #98717e;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.significado-palavra {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 30px;
+  background: #fff;
+  color: var(--rosa-escuro);
+  font-weight: 600;
+  font-size: 14px;
+  margin: 12px 0 20px;
+}
+
+.cartao-significado > p:last-of-type {
+  max-width: 500px;
+  margin: auto;
+  font-size: 13px;
+  line-height: 2;
+}
+
+.mensagem-significado {
+  margin-top: 25px;
+  padding: 20px;
+  border-top: 1px solid #edc5d4;
+  color: #99506d;
+  font-size: 13px;
+  line-height: 2;
+  font-style: italic;
+}
+
+/* CARTA */
+
+#carta {
+  background: linear-gradient(135deg, #fbe6ee, #fff7fa);
+}
+
+.envelope-area {
+  max-width: 650px;
+  margin: auto;
+}
+
+.envelope {
+  position: relative;
+  padding: 45px 25px;
+  min-height: 270px;
+  border-radius: 18px;
+  background: #fff;
+  border: 1px solid #f3cad9;
+  box-shadow: 0 15px 40px rgba(153,57,93,.12);
+  transition: .5s;
+}
+
+.envelope.aberta {
+  transform: translateY(-5px);
+}
+
+.selo {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #f8d8e4;
+  font-size: 33px;
+  box-shadow: 0 5px 15px rgba(153,57,93,.12);
+}
+
+.envelope h3 {
+  color: var(--rosa);
+  font-family: 'Great Vibes', cursive;
+  font-size: 39px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.envelope p {
+  font-size: 13px;
+  line-height: 2;
+}
+
+.carta-conteudo {
+  display: none;
+  text-align: left;
+  margin: 25px auto 0;
+  padding: 25px;
+  border-radius: 15px;
+  background: #fff8fb;
+  border: 1px dashed #e9b4c8;
+  animation: aparecer .7s ease;
+}
+
+.carta-conteudo.visivel {
+  display: block;
+}
+
+.carta-conteudo p {
+  margin: 0 0 15px;
+  line-height: 2;
+  font-size: 13px;
+}
+
+.assinatura {
+  color: var(--rosa);
+  font-weight: 700;
+  text-align: right;
+}
+
+/* MENSAGENS */
+
+#mensagens {
+  background: white;
+}
+
+.mural {
+  max-width: 850px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.mensagem-card {
+  padding: 25px 20px;
+  background: #fff6f9;
+  border: 1px solid #f3d6e1;
+  border-radius: 17px;
+  text-align: left;
+  box-shadow: 0 8px 22px rgba(153,57,93,.05);
+  transition: .3s;
+}
+
+.mensagem-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(153,57,93,.12);
+}
+
+.mensagem-card .coracao {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.mensagem-card p {
+  font-size: 12px;
+  line-height: 2;
+  color: #795566;
+}
+
+.mensagem-card strong {
+  display: block;
+  margin-top: 15px;
+  font-size: 11px;
+  color: var(--rosa-escuro);
+}
+
+.formulario {
+  max-width: 550px;
+  margin: 40px auto 0;
+  padding: 28px;
+  background: #fff8fb;
+  border: 1px solid #f3d6e1;
+  border-radius: 20px;
+  text-align: left;
+}
+
+.formulario h3 {
+  text-align: center;
+  color: var(--rosa);
+  font-size: 19px;
+  margin-bottom: 20px;
+}
+
+.formulario label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 15px 0 7px;
+}
+
+.formulario input, .formulario textarea {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #edc6d5;
+  border-radius: 12px;
+  outline: none;
+  background: white;
+  color: var(--texto);
+  font-size: 13px;
+}
+
+.formulario input:focus, .formulario textarea:focus {
+  border-color: var(--rosa);
+  box-shadow: 0 0 0 3px rgba(216,91,137,.1);
+}
+
+.formulario textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.formulario .botao {
+  width: 100%;
+  margin-top: 18px;
+}
+
+.aviso {
+  margin-top: 15px;
+  color: #977783;
+  font-size: 10px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+/* DESPEDIDA */
+
+#final {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(145deg, #8d3155, #c65c83, #e89ab6);
+  color: white;
+}
+
+#final .etiqueta,
+#final h2 {
+  color: white;
+}
+
+#final .etiqueta {
+  opacity: .8;
+}
+
+.final-card {
+  max-width: 750px;
+  margin: auto;
+  padding: 45px 28px;
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.3);
+  border-radius: 25px;
+  backdrop-filter: blur(8px);
+}
+
+.final-card .grande {
+  font-size: 55px;
+  margin-bottom: 15px;
+}
+
+.final-card h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(43px, 9vw, 68px);
+  font-weight: 400;
+  margin: 10px 0 20px;
+}
+
+.final-card p {
+  font-size: 13px;
+  line-height: 2.2;
+  color: #fff7fa;
+}
+
+.final-card .botao {
+  margin-top: 25px;
+  color: #9e315b;
+  background: white;
+}
+
+.surpresa {
+  display: none;
+  margin-top: 30px;
+  padding: 25px;
+  border-radius: 17px;
+  background: rgba(255,255,255,.16);
+  border: 1px solid rgba(255,255,255,.35);
+  animation: aparecer .8s ease;
+}
+
+.surpresa.visivel {
+  display: block;
+}
+
+.surpresa h3 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 37px;
+  margin-bottom: 12px;
+  font-weight: 400;
+}
+
+/* RODAPÉ */
+
+footer {
+  padding: 27px 15px;
+  background: #6e2745;
+  color: #ffe7f0;
+  text-align: center;
+}
+
+footer p {
+  font-size: 11px;
+  line-height: 2;
+}
+
+footer strong {
+  color: white;
+}
+
+/* ANIMAÇÃO DE ENTRADA */
+
+.revelar {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity .8s ease, transform .8s ease;
+}
+
+.revelar.mostrar {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 700px) {
+  .topo {
+    min-height: 62px;
+    padding: 12px 5%;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .topo nav {
+    display: none;
+    position: absolute;
+    top: 62px;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    flex-direction: column;
+    gap: 20px;
+    background: white;
+    box-shadow: 0 10px 20px rgba(0,0,0,.08);
+  }
+
+  .topo nav.aberto {
+    display: flex;
+  }
+
+  .hero {
+    min-height: 83vh;
+    padding: 35px 15px;
+  }
+
+  .hero-card {
+    padding: 42px 20px;
+  }
+
+  .decoracao {
+    font-size: 55px;
+  }
+
+  .decoracao2 {
+    font-size: 75px;
+  }
+
+  .secao {
+    padding: 65px 16px;
+  }
+
+  .cartao-significado {
+    padding: 30px 20px;
+  }
+
+  .envelope {
+    padding: 35px 18px;
+  }
+
+  .carta-conteudo {
+    padding: 18px;
+  }
+
+  .formulario {
+    padding: 22px 17px;
+  }
+
+  .mural {
+    grid-template-columns: 1fr;
+  }
+
+  .final-card {
+    padding: 35px 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div id="petalas" aria-hidden="true"></div>
+
+<header class="topo">
+  <div class="logo">♡ 8º M02 ♡</div>
+  <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false">☰</button>
+  <nav id="menu">
+    <a href="#inicio">Início</a>
+    <a href="#significado">Significado</a>
+    <a href="#carta">Carta</a>
+    <a href="#mensagens">Mensagens</a>
+    <a href="#final">Despedida</a>
+  </nav>
+</header>
+
+<main>
+
+  <section class="hero" id="inicio">
+    <div class="hero-card">
+      <span class="flor">🌷</span>
+      <p class="pequeno">UMA HOMENAGEM ESPECIAL</p>
+      <h1>Para você,<br><span>Raphaella</span></h1>
+      <div class="linha"></div>
+      <p class="subtitulo">
+        Existem pessoas que passam por nossas vidas
+        e deixam lembranças que o tempo nunca apaga.
+      </p>
+      <p class="turma">Com carinho, da turma 8º M02 ❤️</p>
+      <a href="#significado" class="botao">Descobrir nossa homenagem ↓</a>
+    </div>
+    <div class="decoracao decoracao1">♡</div>
+    <div class="decoracao decoracao2">✿</div>
+    <div class="decoracao decoracao3">♡</div>
+  </section>
+
+  <section class="secao revelar" id="significado">
+    <p class="etiqueta">UM NOME ESPECIAL</p>
+    <h2>O significado de <span>Raphaella</span></h2>
+
+    <div class="cartao-significado">
+      <div class="icone-grande">🌸</div>
+      <h3>Raphaella</h3>
+      <p class="origem">Origem hebraica</p>
+      <div class="significado-palavra">"Deus cura" ou "Deus curou"</div>
+      <p>
+        Raphaella é uma variante feminina de Rafael, nome de
+        origem hebraica associado à cura divina, à proteção
+        e à esperança.
+      </p>
+      <div class="mensagem-significado">
+        E nós, do 8º M02, queremos acrescentar um significado
+        especial: o de uma professora que fez parte da nossa
+        história, compartilhou conhecimentos e deixou
+        lembranças que levaremos conosco.
+        <br><br>
+        Seu nome agora também fará parte de uma linda
+        lembrança da nossa turma. ❤️
+      </div>
+    </div>
+  </section>
+
+  <section class="secao revelar" id="carta">
+    <p class="etiqueta">UMA CARTA DO CORAÇÃO</p>
+    <h2>Uma mensagem para <span>você</span></h2>
+
+    <div class="envelope-area">
+      <div class="envelope" id="envelope">
+        <div class="selo">💌</div>
+        <h3>Querida professora Raphaella...</h3>
+        <p>
+          Preparamos uma carta especial para você.
+          Clique no botão abaixo para abri-la.
+        </p>
+
+        <button class="botao" id="abrirCarta">
+          Abrir nossa carta 💗
+        </button>
+
+        <div class="carta-conteudo" id="conteudoCarta">
+          <p>Querida professora Raphaella,</p>
+
+          <p>
+            Hoje queremos dedicar um momento para agradecer
+            por tudo o que você fez por nossa turma.
+          </p>
+
+          <p>
+           Sabemos que nós te estressamos de mais mais hoje com sua saida fica um vazio nessa turma e eu queria te parabenizar por nos aguentar por 5 Meses inteiros com a gente e queriamos dizer que as suas aulas foram as melhores e nunca teremos outra aula igual.
+          </p>
+
+          <p>
+            Obrigado por cada explicação, cada puxão de orelha,
+            cada ensinamento e por todos os momentos
+            vividos em sala de aula.
+          </p>
+
+          <p>
+            Talvez nem sempre tenhamos demonstrado,
+            mas sua presença foi importante para nós.
+            Cada professor deixa um pouco de si em
+            seus alunos, e temos certeza de que
+            levaremos muitos dos seus ensinamentos
+            para o futuro.
+          </p>
+
+          <p>
+            Desejamos que essa nova jornada seja
+            repleta de alegrias, conquistas e
+            momentos especiais.
+          </p>
+
+          <p>
+            Esta não é uma despedida de tudo o que
+            vivemos, mas uma forma de dizer que
+            somos gratos por ter feito parte
+            da sua trajetória.
+          </p>
+
+          <p>
+            Com muito carinho, respeito e gratidão,
+            E sim eu ainda vou matar aula na sua sala um dia desses...
+          </p>
+
+          <p class="assinatura">
+           Eduardo, 8º M02 ❤️
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao revelar" id="mensagens">
+    <p class="etiqueta">PALAVRAS DE CARINHO</p>
+    <h2>Um mural de <span>lembranças</span></h2>
+
+    <div class="mural" id="mural">
+      <article class="mensagem-card">
+        <div class="coracao">💗</div>
+        <p>
+          Obrigado por todos os ensinamentos e pela
+          dedicação em nossa sala. Desejamos muito
+          sucesso nessa nova etapa!
+        </p>
+        <strong>Com carinho,Eduardo</strong>
+      </article>
+
+      <article class="mensagem-card">
+        <div class="coracao">🌷</div>
+        <p>
+          Que você continue inspirando muitos alunos
+          e que nunca faltem motivos para sorrir.
+          Sentiremos sua falta!
+        </p>
+        <strong>Com carinho,Dudu</strong>
+      </article>
+
+      <article class="mensagem-card">
+        <div class="coracao">🦋</div>
+        <p>
+          Uma professora especial deixa ensinamentos
+          que vão muito além dos livros. Obrigado
+          por fazer parte da nossa história.
+        </p>
+        <strong>Com carinho,Dudu</strong>
+      </article>
+    </div>
+
+    <div class="formulario">
+      <h3>💌 Escreva sua mensagem</h3>
+
+      <form id="formMensagem">
+        <label for="nomeAluno">Seu nome</label>
+        <input
+          type="text"
+          id="nomeAluno"
+          placeholder="Digite seu nome"
+          maxlength="40"
+          required
+        >
+
+        <label for="textoAluno">Sua mensagem para a professora</label>
+        <textarea
+          id="textoAluno"
+          placeholder="Escreva uma mensagem de carinho..."
+          maxlength="500"
+          required
+        ></textarea>
+
+        <button type="submit" class="botao">
+          Adicionar ao mural ❤️
+        </button>
+      </form>
+
+      <p class="aviso">
+        As mensagens adicionadas ficam salvas somente
+        neste navegador. Para que toda a turma veja
+        as mesmas mensagens, será necessário configurar
+        um servidor ou banco de dados.
+      </p>
+    </div>
+  </section>
+
+  <section class="secao revelar" id="final">
+    <p class="etiqueta">UM ÚLTIMO RECADO</p>
+
+    <div class="final-card">
+      <div class="grande">💐</div>
+      <h2>Até logo, professora!</h2>
+
+      <p>
+        As salas podem mudar, os professores podem seguir
+        novos caminhos e os anos podem passar...
+        <br><br>
+        Mas os ensinamentos, os momentos e o carinho
+        que recebemos de uma professora especial
+        permanecem em nossa memória.
+        <br><br>
+        Obrigado por fazer parte da história
+        do 8º M02, Raphaella!
+      </p>
+
+      <button class="botao" id="surpresaBtn">
+        Abrir nossa surpresa final 🎁
+      </button>
+
+      <div class="surpresa" id="surpresa">
+        <h3>Você sempre fará parte da nossa história! ❤️</h3>
+        <p>
+          Professora Raphaella, talvez este seja apenas
+          um pequeno site, mas foi preparado com
+          muito carinho para mostrar o quanto sua
+          presença foi importante.
+          <br><br>
+          Desejamos tudo de melhor nessa nova etapa.
+          Que você continue levando conhecimento,
+          alegria e inspiração por onde passar.
+          <br><br>
+          <strong>Com amor, do Eduu. 🌷</strong>
+        </p>
+        <div style="font-size:35px;margin-top:20px">
+          💗 🌸 🦋 💐 ❤️
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>
+    Feito com ❤️ p
+    em homenagem à professora <strong>Raphaella</strong>.
+  </p>
+  <p>Um presente digital de carinho, gratidão e despedida. 🌷</p>
+  <p>Projeto estudantil sem fins comerciais.</p>
+</footer>
+
+<script>
+/* MENU MOBILE */
+
+const menuBtn = document.getElementById("menuBtn");
+const menu = document.getElementById("menu");
+
+menuBtn.addEventListener("click", () => {
+  const aberto = menu.classList.toggle("aberto");
+  menuBtn.setAttribute("aria-expanded", String(aberto));
+  menuBtn.textContent = aberto ? "✕" : "☰";
+});
+
+menu.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", () => {
+    menu.classList.remove("aberto");
+    menuBtn.setAttribute("aria-expanded", "false");
+    menuBtn.textContent = "☰";
+  });
+});
+
+/* PÉTALAS ANIMADAS */
+
+const areaPetalas = document.getElementById("petalas");
+const simbolos = ["🌸", "🌷", "💗", "✿", "♡"];
+
+function criarPetala() {
+  const petala = document.createElement("span");
+  petala.className = "petala";
+  petala.textContent =
+    simbolos[Math.floor(Math.random() * simbolos.length)];
+
+  petala.style.left = Math.random() * 100 + "vw";
+  petala.style.fontSize = (12 + Math.random() * 15) + "px";
+  petala.style.animationDuration = (7 + Math.random() * 8) + "s";
+  petala.style.animationDelay = (Math.random() * 2) + "s";
+
+  areaPetalas.appendChild(petala);
+
+  setTimeout(() => petala.remove(), 17000);
+}
+
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  setInterval(criarPetala, 700);
+}
+
+/* ABRIR CARTA */
+
+const abrirCarta = document.getElementById("abrirCarta");
+const conteudoCarta = document.getElementById("conteudoCarta");
+const envelope = document.getElementById("envelope");
+
+abrirCarta.addEventListener("click", () => {
+  const aberta = conteudoCarta.classList.toggle("visivel");
+  envelope.classList.toggle("aberta", aberta);
+  abrirCarta.textContent = aberta
+    ? "Fechar nossa carta 💌"
+    : "Abrir nossa carta 💗";
+});
+
+/* MENSAGENS LOCAIS */
+
+const formMensagem = document.getElementById("formMensagem");
+const nomeAluno = document.getElementById("nomeAluno");
+const textoAluno = document.getElementById("textoAluno");
+const mural = document.getElementById("mural");
+
+function criarCartao(nome, texto) {
+  const artigo = document.createElement("article");
+  artigo.className = "mensagem-card";
+
+  const coracao = document.createElement("div");
+  coracao.className = "coracao";
+  coracao.textContent = "💖";
+
+  const paragrafo = document.createElement("p");
+  paragrafo.textContent = texto;
+
+  const assinatura = document.createElement("strong");
+  assinatura.textContent = nome;
+
+  artigo.append(coracao, paragrafo, assinatura);
+  mural.appendChild(artigo);
+}
+
+function carregarMensagens() {
+  try {
+    const mensagens = JSON.parse(
+      localStorage.getItem("mensagensRaphaella") || "[]"
+    );
+
+    mensagens.forEach(item => {
+      if (
+        item &&
+        typeof item.nome === "string" &&
+        typeof item.texto === "string"
+      ) {
+        criarCartao(item.nome, item.texto);
+      }
+    });
+  } catch (erro) {
+    console.warn("Não foi possível carregar as mensagens.");
+  }
+}
+
+formMensagem.addEventListener("submit", event => {
+  event.preventDefault();
+
+  const nome = nomeAluno.value.trim();
+  const texto = textoAluno.value.trim();
+
+  if (!nome || !texto) {
+    alert("Preencha seu nome e sua mensagem. ❤️");
+    return;
+  }
+
+  if (nome.length > 40 || texto.length > 500) {
+    alert("Verifique o tamanho dos campos.");
+    return;
+  }
+
+  const mensagem = { nome, texto };
+
+  try {
+    const mensagens = JSON.parse(
+      localStorage.getItem("mensagensRaphaella") || "[]"
+    );
+
+    mensagens.push(mensagem);
+
+    localStorage.setItem(
+      "mensagensRaphaella",
+      JSON.stringify(mensagens)
+    );
+
+    criarCartao(nome, texto);
+    formMensagem.reset();
+
+    alert("Sua mensagem foi adicionada ao mural! ❤️");
+  } catch (erro) {
+    alert(
+      "Não foi possível salvar neste navegador. " +
+      "Verifique o espaço disponível."
+    );
+  }
+});
+
+carregarMensagens();
+
+/* SURPRESA FINAL */
+
+const surpresaBtn = document.getElementById("surpresaBtn");
+const surpresa = document.getElementById("surpresa");
+
+surpresaBtn.addEventListener("click", () => {
+  const visivel = surpresa.classList.toggle("visivel");
+
+  surpresaBtn.textContent = visivel
+    ? "Fechar surpresa 💗"
+    : "Abrir nossa surpresa final 🎁";
+
+  if (visivel) {
+    surpresa.scrollIntoView({
+      behavior: "smooth",
+      block: "center"
+    });
+    soltarCoracoes();
+  }
+});
+
+/* CORAÇÕES DA SURPRESA */
+
+function soltarCoracoes() {
+  const emojis = ["💗", "💖", "💕", "🌸", "❤️"];
+
+  for (let i = 0; i < 24; i++) {
+    const coracao = document.createElement("span");
+
+    coracao.textContent =
+      emojis[Math.floor(Math.random() * emojis.length)];
+
+    coracao.style.position = "fixed";
+    coracao.style.left = Math.random() * 100 + "vw";
+    coracao.style.bottom = "-40px";
+    coracao.style.fontSize = (18 + Math.random() * 22) + "px";
+    coracao.style.zIndex = "100";
+    coracao.style.pointerEvents = "none";
+    coracao.style.transition =
+      "transform 3s ease-out, opacity 3s ease-out";
+
+    document.body.appendChild(coracao);
+
+    requestAnimationFrame(() => {
+      coracao.style.transform =
+        `translateY(-${window.innerHeight + 100}px) rotate(${Math.random() * 180}deg)`;
+      coracao.style.opacity = "0";
+    });
+
+    setTimeout(() => coracao.remove(), 3200);
+  }
+}
+
+/* ANIMAÇÃO AO ROLAR A PÁGINA */
+
+const elementos = document.querySelectorAll(".revelar");
+
+if ("IntersectionObserver" in window) {
+  const observador = new IntersectionObserver((entradas, obs) => {
+    entradas.forEach(entrada => {
+      if (entrada.isIntersecting) {
+        entrada.target.classList.add("mostrar");
+        obs.unobserve(entrada.target);
+      }
+    });
+  }, {
+    threshold: 0.12
+  });
+
+  elementos.forEach(elemento => observador.observe(elemento));
+} else {
+  elementos.forEach(elemento => elemento.classList.add("mostrar"));
+}
+</script>
+
+</body>
+</html>
